@@ -365,7 +365,48 @@
                     </div>
                 </div>
             </section>
-            
+            <!-- Contacto -->
+            <section id="contacto" class="pt-20">
+                <div class="">
+                    <h2 class="font-bold text-3xl">Contacto</h2>
+                    <div class="m-10">
+                        <div class="w-1/3">
+                            <form id="contact-form" netlify>
+                                <div class="mb-4">
+                                    <label class="block font-semibold mb-2" for="nombre">Nombre:</label>
+                                    <input type="text" id="nombre" name="nombre"
+                                        class="w-full p-2 border-secondary border rounded focus:outline-none" />
+                                    <div id="nombre-error" class="error-message text-red-500 text-xs"></div>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block font-semibold mb-2" for="correo">Correo:</label>
+                                    <input type="text" id="correo" name="correo"
+                                        class="w-full p-2 border-secondary border rounded focus:outline-none" />
+                                    <div id="correo-error" class="error-message text-red-500 text-xs"></div>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block font-semibold mb-2" for="asunto">Asunto:</label>
+                                    <input type="text" id="asunto" name="asunto"
+                                        class="w-full p-2 border-secondary border rounded focus:outline-none" />
+                                    <div id="asunto-error" class="error-message text-red-500 text-xs"></div>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block font-semibold mb-2" for="mensaje">Mensaje:</label>
+                                    <textarea id="mensaje" name="mensaje"
+                                        class="w-full p-2 border-secondary border rounded focus:outline-none"></textarea>
+                                    <div id="mensaje-error" class="error-message text-red-500 text-xs"></div>
+                                </div>
+                                <div class="flex">
+                                    <button type="submit" id="submit-button" disabled
+                                        class="w-full bg-gray-500 text-white hover:bg-white hover:text-gray-500 py-2 px-4 rounded focus:outline-none border border-lg">
+                                        Enviar
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 
