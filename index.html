@@ -2,274 +2,77 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Hoja de Vida</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" type="image/png" href="images/person-circle.svg">
-
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+        href="/css/app-wa-02670e9412103b5852dcbe140d278c49.css?vsn=d">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-light.css">
+    <link href="lib/noty.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="icon" type="image/png" href="images/person-circle.svg" />
 </head>
 
 <body>
-
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Mi Hoja de Vida</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+    <div class="flex flex-col ">
+        <div class="p-5 fixed bg-gray-300 w-full z-30">
+            <div class="flex items-center justify-between">
+                <div class="inline-flex items-center">
+                    <h1 class="text-secondary font-medium text-2xl">
+                    </h1>
+                </div>
+                <ul class="flex">
+                    <li class="mr-6">
+                        <a class="text-black text-sm" href="#">Inicio</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sobre-mi">Sobre Mí</a>
+                    <li class="mr-6">
+                        <a class="text-black text-sm" href="#sobre-mi">Sobre Mí</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experiencia">Experiencia</a>
+                    <li class="mr-6">
+                        <a class="text-black text-sm" href="#experiencia">Experiencia</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#educacion">Educación</a>
+                    <li class="mr-6">
+                        <a class="text-black text-sm" href="#educacion">Educación</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#proyectos">Proyectos</a>
+                    <li class="mr-6">
+                        <a class="text-black text-sm" href="#proyectos">Proyectos</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contactos</a>
+                    <li class="mr-6">
+                        <a class="text-black text-sm" href="#contacto">Contactos</a>
                     </li>
                 </ul>
+                <div class="flex items-center">
+                    <button onClick="{handleLogout}" class="text-black text-sm mx-5">
+                        Cerrar sesión
+                    </button>
+                </div>
             </div>
         </div>
-    </nav>
+    
+    </div>
 
     <!-- Header -->
-    <header class="bg-light py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h1 class="fw-bold animate__animated animate__shakeX">Andersson Patsy <br> Godoy Garcia</h1>
-                    <h3 class="fw-normal animate__animated animate__shakeX">Desarrollador Web</h3>
-                    <p class="mt-4 animate__animated animate__shakeX">Soy un estudiante con muchas ganas de seguir aprendiendo y poner en práctica todos mis conocimientos</p>
-                    <div class="d-flex mt-5 floatbtn-container animate__animated animate__shakeX">
-                        <a href="utils/CVANDERSSONGODOY.pdf" target="_blank" class="btn btn-primary me-3 animate__animated animate__bounce"><i
-                                class="fas fa-file-pdf me-2"></i> Descargar CV</a>
-                    </div>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="images/IMG006.jpg" class="rounded-circle img-thumbnail animate__animated animate__bounce"
-                        alt="Foto de perfil">
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Sobre Mi -->
-    <section id="sobre-mi" class="py-5">
-        <div class="container">
-            <h2 class="fw-bold mb-5">Sobre Mí</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="fw-bold">Descripción:</p>
-                    <p>Soy un estudiante de la carrera de Desarrollo de Sistemas en IDAT.
-                        A lo largo de mi carrera he obtenido distintas habilidades que me gustaria poner en practica en un trabajo profesional y formar una carrera laboral
-                    </p>
-                    <p class="fw-bold">Habilidades:</p>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>Bootstrap</li>
-                        <li>Java</li>
-                        <li>Python</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <p class="fw-bold">Intereses:</p>
-                    <ul>
-                        <li>Desarrollo Web</li>
-                        <li>Diseño Gráfico</li>
-                        <li>Tecnología</li>
-                        <li>Cine</li>
-                        <li>Música</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Experiencia -->
-    <section id="experiencia" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="fw-bold mb-5">Experiencia Laboral</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title fw-bold">Teleoperador</h4>
-                            <h5 class="card-subtitle mb-2 text-muted">Global Sales Solutions</h5>
-                            <p class="card-text">Atención al cliente y ventas</p>
-                            <p class="card-text"><small class="text-muted">Mayo 2022 - Setiembre 2022</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title fw-bold">Practicante</h4>
-                            <h5 class="card-subtitle mb-2 text-muted">Consigue Ventas</h5>
-                            <p class="card-text">Desarrollo Frontend</p>
-                            <p class="card-text"><small class="text-muted">Mayo 2023 - Actualidad</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Educación -->
-    <section id="educacion" class="py-5">
-        <div class="container">
-            <h2 class="fw-bold mb-5">Educación</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title fw-bold">Desarrollo de Sistemas de Información</h4>
-                            <h5 class="card-subtitle mb-2 text-muted">INSTITUTO SUPERIOR TECNOLÓGICO IDAT</h5>
-                            <p class="card-text">En Curso</p>
-                            <p class="card-text"><small class="text-muted">2021 - Actualidad</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title fw-bold">Curso de Desarrollo Web HTML y CSS</h4>
-                            <h5 class="card-subtitle mb-2 text-muted">OpenBootcamp</h5>
-                            <p class="card-text">Curso donde se aprende todo sobre html y css</p>
-                            <p class="card-text"><small class="text-muted">2023</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Proyectos -->
-    <section id="proyectos" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="fw-bold mb-5">Proyectos</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title fw-bold">Encriptador Alura</h4>
-                            <p class="card-text">Encriptador y Descriptador para Oracle Nex Education</p>
-                            <a href="https://anderssongodoy.github.io/Codificador/" target="_blank"
-                                class="btn btn-primary">Ver Proyecto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title fw-bold">Sistema Web Para Bodega</h4>
-                            <p class="card-text">Sistema web de Ventas - Compras - Inventario - Clientes - Empleados
-                                <br> Hecho con Spring
-                            </p>
-                            <a href="https://github.com/anderssongodoy/SistemaTienda-JavaSpring" target="_blank"
-                                class="btn btn-primary">Ver Proyecto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title fw-bold">Sistema de Escritorio para Licoreria</h4>
-                            <p class="card-text">Sistema de Venta y Compra para licoreria <br> Usando QtDesigner</p>
-                            <a href="https://github.com/anderssongodoy/LOCORERIA-IDAT-PYTHON" target="_blank"
-                                class="btn btn-primary">Ver Proyecto</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Contacto -->
-    <section id="contacto" class="py-5">
-        <div class="container">
-            <h2 class="fw-bold mb-5">Contacto</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <form id="contact-form" method="GET">
-                        <div class="form-group mb-3">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="email">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" name="email">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea class="form-control" id="mensaje" name="mensaje" rows="5"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary animated bounce">Enviar</button>
-                    </form>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title fw-bold">Información de Contacto</h4>
-                            <ul class="list-unstyled">
-                                <li class="mb-3"><i class="bi bi-geo-alt-fill me-2"></i> Lima, Villa El Salvador</li>
-                                <li class="mb-3"><i class="bi bi-envelope-fill me-2"></i> anderssongodoygarcia@gmail.com
-                                </li>
-                                <li><i class="bi bi-telephone-fill me-2"></i> +51 982 726 414</li>
-                            </ul>
-                            <div class="social-links mt-4">
-                                <a href="https://github.com/anderssongodoy" target="_blank" class="google-plus"><i
-                                        class="bi bi-github"></i></a>
-                                <a href="https://www.linkedin.com/in/andersson-godoy/" target="_blank"
-                                    class="linkedin"><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; 2023 - Todos los derechos reservados</p>
-                </div>
-                <div class="col-md-6">
-                    <p class="text-end">Desarrollado por <a href="#">Andersson Godoy</a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Bootstrap 5 Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-    <!-- SweetAlert2 Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/floatbtn.js@1.0.1/dist/floatbtn.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="scripts/main.js"></script>
 </body>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="lib/noty.js" type="text/javascript"></script>
+<script src="scripts/main.js"></script>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+<script src="scripts/typing.js"></script>
+
+<script>
+    // Agregar un evento de clic para mostrar el texto
+    const imageContainer = document.querySelector('.image-container');
+    imageContainer.addEventListener('click', () => {
+        const textOverlay = document.querySelector('.text-overlay');
+        textOverlay.style.opacity = '1';
+    });
+</script>
 
 </html>
